@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iFA-rL-J4h">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Museums in NYC-->
+        <scene sceneID="mcr-Zj-FEY">
+            <objects>
+                <tableViewController id="Zhp-AH-osj" customClass="MuseumTableViewController" customModule="NYCMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="dh4-Dn-WhI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="tS3-st-Ldx" customClass="CustomTableViewCell" customModule="NYCMuseum" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tS3-st-Ldx" id="94w-Go-Gd6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-RY-aaj">
+                                            <rect key="frame" x="15" y="9" width="60" height="60"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Musume Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYH-Hx-8yG">
+                                            <rect key="frame" x="86" y="9" width="410" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-7a-YKG">
+                                            <rect key="frame" x="86" y="38" width="205" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIl-6l-F6a">
+                                            <rect key="frame" x="85" y="54" width="205" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="MuseumName" destination="aYH-Hx-8yG" id="CfN-zr-rxW"/>
+                                    <outlet property="MuseumeLocation" destination="MIl-6l-F6a" id="kse-5B-ega"/>
+                                    <outlet property="MuseumeType" destination="wEQ-7a-YKG" id="CeF-41-dV6"/>
+                                    <outlet property="MusumeImage" destination="U4l-RY-aaj" id="sx9-uN-Rba"/>
+                                    <segue destination="GEx-Zu-AEL" kind="show" identifier="showMuseumDetail" id="cyc-no-Uj9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zhp-AH-osj" id="chj-Ik-9qP"/>
+                            <outlet property="delegate" destination="Zhp-AH-osj" id="UfT-sz-2RA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Museums in NYC" id="ilt-yl-Ylc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efp-TQ-3zS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rn1-yh-QYt">
+            <objects>
+                <viewController id="woN-63-Gqm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g4r-hY-xAf"/>
+                        <viewControllerLayoutGuide type="bottom" id="aAL-EV-fkw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rWY-5b-cUj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-5u-MUE">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aAL-EV-fkw" firstAttribute="top" secondItem="kmd-5u-MUE" secondAttribute="bottom" id="7zy-NI-Xby"/>
+                            <constraint firstItem="kmd-5u-MUE" firstAttribute="leading" secondItem="rWY-5b-cUj" secondAttribute="leadingMargin" id="bjz-Gq-nup"/>
+                            <constraint firstItem="kmd-5u-MUE" firstAttribute="top" secondItem="g4r-hY-xAf" secondAttribute="bottom" id="cnc-1a-rRi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kmd-5u-MUE" secondAttribute="trailing" id="oPE-8f-5Gg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="museumImage" destination="kmd-5u-MUE" id="qxj-Np-7E8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eo7-wg-v1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="-1026"/>
+        </scene>
+        <!--Detail Table View Controller-->
+        <scene sceneID="rcK-dp-tEC">
+            <objects>
+                <tableViewController id="GEx-Zu-AEL" customClass="DetailTableViewController" customModule="NYCMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" id="DVc-By-J9m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="911-Tribute-Center" id="Oxd-rF-aAi">
+                            <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="36" id="FR3-qJ-f5L" customClass="DetailTableViewCell" customModule="NYCMuseum" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="392" width="600" height="36"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FR3-qJ-f5L" id="VB0-aK-rJg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="35.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90o-jP-Etn">
+                                            <rect key="frame" x="25" y="7" width="584" height="21"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="261" verticalHuggingPriority="251" misplaced="YES" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjC-UH-GMP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-yf-Uhk">
+                                                    <rect key="frame" x="195" y="0.0" width="390" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MjC-UH-GMP" firstAttribute="width" secondItem="x2F-yf-Uhk" secondAttribute="width" multiplier="0.5" id="Uda-bC-RhW"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="90o-jP-Etn" secondAttribute="trailing" id="354-aO-h8p"/>
+                                        <constraint firstItem="90o-jP-Etn" firstAttribute="leading" secondItem="VB0-aK-rJg" secondAttribute="leadingMargin" id="A7l-lU-Moj"/>
+                                        <constraint firstItem="90o-jP-Etn" firstAttribute="centerY" secondItem="VB0-aK-rJg" secondAttribute="centerY" id="gGM-Fr-8PY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fieldLabel" destination="MjC-UH-GMP" id="Zs6-8k-hae"/>
+                                    <outlet property="valueLabel" destination="x2F-yf-Uhk" id="n8C-Ff-A3L"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GEx-Zu-AEL" id="7xH-8C-che"/>
+                            <outlet property="delegate" destination="GEx-Zu-AEL" id="C8E-vL-g79"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="imageView" destination="Oxd-rF-aAi" id="nUb-DB-Tao"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWo-hJ-qKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="233"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8st-Ds-Ofe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iFA-rL-J4h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZD-un-Myk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zhp-AH-osj" kind="relationship" relationship="rootViewController" id="P6B-Rm-9by"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CI-jP-YB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="233"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="911-Tribute-Center" width="1000" height="667"/>
+    </resources>
+</document>
