@@ -21,8 +21,23 @@ class DetailTableViewController: UITableViewController {
         
         imageView.image = UIImage(named: museum.image)
         
+        tableView.backgroundColor = UIColor(white: 0.98, alpha: 1)
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+        tableView.separatorColor = UIColor(white: 0.9, alpha: 1)
+        
+        title = museum.name
+        
+        tableView.estimatedRowHeight = 36
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
+    // Only change this ViewController bar style
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        self.navigationController?.navigationBar.barStyle = .Black
+//    }
+//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,22 +61,24 @@ class DetailTableViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            cell.fieldLabel.text = "Musume Name"
+            cell.fieldLabel.text = "Name"
             cell.valueLabel.text = museum.name
         case 1:
-            cell.fieldLabel.text = "Musume Type"
+            cell.fieldLabel.text = "Type"
             cell.valueLabel.text = museum.type
         case 2:
-            cell.fieldLabel.text = "Musume Location"
+            cell.fieldLabel.text = "Address"
             cell.valueLabel.text = museum.location
         case 3:
-            cell.fieldLabel.text = "Did visit before?"
+            cell.fieldLabel.text = "Visited?"
             cell.valueLabel.text = museum.isVisited ? "Yes" : "No"
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""
             
         }
+        
+        cell.backgroundColor = UIColor.clearColor()
         
         return cell
     }

@@ -11,10 +11,10 @@ import UIKit
 class MuseumTableViewController: UITableViewController {
     
     var musumes = [
-        Museum(name: "9/11 Tribute Center", type: "History", location: "Manhattan", image: "911-Tribute-Center.jpg", isVisited:false),
-        Museum(name: "African Burial Ground National Monument", type: "History", location: "Manhattan", image: "African-Burial-Ground-National-Monument.jp g", isVisited:false),
-        Museum(name: "AIGA National Design Center", type: "Art", location: "Manhattan", image: "AIGA-National-Design-Center.jpg", isVisited:false),
-        Museum(name: "A.I.R. Gallery", type: "Art", location: "Brooklyn", image: "A.I.R.-Gallery.jpg", isVisited:false),
+        Museum(name: "9/11 Tribute Center", type: "History", location: "120 Liberty St, New York, NY 10006", image: "911-Tribute-Center.jpg", isVisited:false),
+        Museum(name: "African Burial Ground National Monument", type: "History", location: "290 Broadway, New York, NY 10007", image: "African-Burial-Ground-National-Monument.jp g", isVisited:false),
+        Museum(name: "AIGA National Design Center", type: "Art", location: "233 Broadway, New York, NY 10279", image: "AIGA-National-Design-Center.jpg", isVisited:false),
+        Museum(name: "A.I.R. Gallery", type: "Art", location: "155 Plymouth St, Brooklyn, NY 11201", image: "A.I.R.-Gallery.jpg", isVisited:false),
         Museum(name: "Alice Austen House", type: "Historic house", location: "Staten Island", image: "Alice-Austen-House.jpg", isVisited:false),
         Museum(name: "American Academy of Arts and Letters", type: "Art", location: "Manhattan", image: "American-Academy-of-Arts-and-Letters.jpg", isVisited:false),
         Museum(name: "American Folk Art Museum", type: "Art", location: "Manhattan", image: "American-Folk-Art-Museum.jpg", isVisited:false),
@@ -35,6 +35,11 @@ class MuseumTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
