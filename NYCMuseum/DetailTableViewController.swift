@@ -13,6 +13,10 @@ class DetailTableViewController: UITableViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBAction func close(segue: UIStoryboardSegue){
+        
+    }
+    
     var museum: Museum!
     
     
