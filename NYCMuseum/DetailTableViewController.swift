@@ -14,8 +14,16 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func close(segue: UIStoryboardSegue){
-        
+        if let sourceVC = segue.sourceViewController as? ReviewViewController {
+            if let rating = sourceVC.rating{
+                self.museum.rating = rating
+                self.ratingBtn.setImage(UIImage(named: rating), forState: .Normal)
+            }
+        }
     }
+    
+    @IBOutlet weak var ratingBtn: UIButton!
+    
     
     var museum: Museum!
     
