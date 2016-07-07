@@ -11,6 +11,8 @@
 		BD02DA721D24BAE000F52FB7 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD02DA711D24BAE000F52FB7 /* DetailTableViewCell.swift */; };
 		BD13EDF91D2CA06900DD6AEF /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD13EDF81D2CA06900DD6AEF /* ReviewViewController.swift */; };
 		BD2B6CE41D2480D100D81B7C /* MuseumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B6CE31D2480D100D81B7C /* MuseumDetailViewController.swift */; };
+		BD7B19C81D2DE83E00F1032E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7B19C71D2DE83E00F1032E /* MapKit.framework */; };
+		BD7B19CC1D2DEB2A00F1032E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B19CB1D2DEB2A00F1032E /* MapViewController.swift */; };
 		BD918D811D2431C500247385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD918D801D2431C500247385 /* AppDelegate.swift */; };
 		BD918D861D2431C500247385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD918D841D2431C500247385 /* Main.storyboard */; };
 		BD918D881D2431C500247385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD918D871D2431C500247385 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		BD02DA711D24BAE000F52FB7 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		BD13EDF81D2CA06900DD6AEF /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		BD2B6CE31D2480D100D81B7C /* MuseumDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MuseumDetailViewController.swift; path = ../MuseumDetailViewController.swift; sourceTree = "<group>"; };
+		BD7B19C71D2DE83E00F1032E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BD7B19CB1D2DEB2A00F1032E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD918D7D1D2431C500247385 /* NYCMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD918D801D2431C500247385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD918D851D2431C500247385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7B19C81D2DE83E00F1032E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +71,30 @@
 			name = "None-use Controller";
 			sourceTree = "<group>";
 		};
+		BD7B19C91D2DE89300F1032E /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD02DA711D24BAE000F52FB7 /* DetailTableViewCell.swift */,
+				BD918D941D24324A00247385 /* CustomTableViewCell.swift */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		BD7B19CA1D2DE8BA00F1032E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD13EDF81D2CA06900DD6AEF /* ReviewViewController.swift */,
+				BD918D921D2431FA00247385 /* MuseumTableViewController.swift */,
+				BD02DA6F1D24B7B400F52FB7 /* DetailTableViewController.swift */,
+				BD7B19CB1D2DEB2A00F1032E /* MapViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		BD918D741D2431C500247385 = {
 			isa = PBXGroup;
 			children = (
+				BD7B19C71D2DE83E00F1032E /* MapKit.framework */,
 				BD918D7F1D2431C500247385 /* NYCMuseum */,
 				BD918D7E1D2431C500247385 /* Products */,
 			);
@@ -89,11 +115,8 @@
 				BD02DA6D1D24B76400F52FB7 /* Support Documents */,
 				BD918D801D2431C500247385 /* AppDelegate.swift */,
 				BD918D841D2431C500247385 /* Main.storyboard */,
-				BD13EDF81D2CA06900DD6AEF /* ReviewViewController.swift */,
-				BD02DA711D24BAE000F52FB7 /* DetailTableViewCell.swift */,
-				BD918D941D24324A00247385 /* CustomTableViewCell.swift */,
-				BD918D921D2431FA00247385 /* MuseumTableViewController.swift */,
-				BD02DA6F1D24B7B400F52FB7 /* DetailTableViewController.swift */,
+				BD7B19CA1D2DE8BA00F1032E /* ViewController */,
+				BD7B19C91D2DE89300F1032E /* ViewCell */,
 				BD918D871D2431C500247385 /* Assets.xcassets */,
 				BDB2C5B31D24A9E10050C274 /* Transform.playground */,
 			);
@@ -133,6 +156,11 @@
 					BD918D7C1D2431C500247385 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = Q7W47GFKL3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -176,6 +204,7 @@
 				BD918D951D24324A00247385 /* CustomTableViewCell.swift in Sources */,
 				BD02DA721D24BAE000F52FB7 /* DetailTableViewCell.swift in Sources */,
 				BD918D811D2431C500247385 /* AppDelegate.swift in Sources */,
+				BD7B19CC1D2DEB2A00F1032E /* MapViewController.swift in Sources */,
 				BD2B6CE41D2480D100D81B7C /* MuseumDetailViewController.swift in Sources */,
 				BD918D931D2431FA00247385 /* MuseumTableViewController.swift in Sources */,
 				BD13EDF91D2CA06900DD6AEF /* ReviewViewController.swift in Sources */,
