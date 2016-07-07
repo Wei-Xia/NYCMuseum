@@ -42,6 +42,48 @@ class DetailTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 36
         tableView.rowHeight = UITableViewAutomaticDimension
         
+//        let leftCons = NSLayoutConstraint(item: imageView, attribute: .Leading, relatedBy: .Equal, toItem: imageView.superview, attribute: .Leading, multiplier: 1, constant: 0)
+//        let rightCons = NSLayoutConstraint(item: imageView, attribute: .Trailing, relatedBy: .Equal, toItem: imageView.superview, attribute: .Trailing, multiplier: 1, constant: 0)
+//        let topCons = NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: imageView.superview, attribute: .Top, multiplier: 1, constant: 0)
+//        let bottomCons = NSLayoutConstraint(item: imageView, attribute: .Bottom, relatedBy: .Equal, toItem: imageView.superview, attribute: .Bottom, multiplier: 1, constant: 0)
+//        
+//        leftCons.active = true
+//        rightCons.active = true
+//        topCons.active = true
+//        bottomCons.active = true
+    }
+    
+//    func autolayout() {
+//        
+//        imageView.image = UIImage(named: museum.image)
+//        
+//        let leftCons = NSLayoutConstraint(item: imageView, attribute: .Leading, relatedBy: .Equal, toItem: imageView.superview, attribute: .Leading, multiplier: 1, constant: 0)
+//        let rightCons = NSLayoutConstraint(item: imageView, attribute: .Trailing, relatedBy: .Equal, toItem: imageView.superview, attribute: .Trailing, multiplier: 1, constant: 0)
+//        let topCons = NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: imageView.superview, attribute: .Top, multiplier: 1, constant: 0)
+//        let bottomCons = NSLayoutConstraint(item: imageView, attribute: .Bottom, relatedBy: .Equal, toItem: imageView.superview, attribute: .Bottom, multiplier: 1, constant: 0)
+//        
+//        leftCons.active = true
+//        rightCons.active = true
+//        topCons.active = true
+//        bottomCons.active = true
+//    }
+    
+
+    // ToDo: This doesn't work!!!!!!!!!!!!!!
+    func autolayoutUsingConstraint() {
+        self.imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        let leftCons = NSLayoutConstraint(item: imageView, attribute: .Leading, relatedBy: .Equal, toItem: imageView.superview, attribute: .Leading, multiplier: 1, constant: 0)
+        let rightCons = NSLayoutConstraint(item: imageView, attribute: .Trailing, relatedBy: .Equal, toItem: imageView.superview, attribute: .Trailing, multiplier: 1, constant: 0)
+        let topCons = NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: imageView.superview, attribute: .Top, multiplier: 1, constant: 0)
+        let bottomCons = NSLayoutConstraint(item: imageView, attribute: .Bottom, relatedBy: .Equal, toItem: imageView.superview, attribute: .Bottom, multiplier: 1, constant: 0)
+        
+        leftCons.active = true
+        rightCons.active = true
+        topCons.active = true
+        bottomCons.active = true
+
     }
     
     // Only change this ViewController bar style
