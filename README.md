@@ -7,7 +7,7 @@ A new Agile experience.
 ## Getting Started
 This project uses Node.js version 6.7.0. We recommend installing Node.js via [nvm](https://github.com/creationix/nvm). With nvm, you can install the correct version of Node.js using `nvm use node`, which installs the latest version. To run the project for development:
 
-### Install
+### Install NPM packages
 Using NPM Enterprise for private packages.
 
 Run the following command to login in NPM Enterprise.
@@ -21,7 +21,10 @@ Password:
 Email: (this IS public) xiawei@us.ibm.com
 ```
 
-And run `npm install`, and you may get an err message like `npm ERR! visit https://github.ibm.com/login/oauth/authorize?redirect_uri=https%3A%2F%2Fnpm.whitewater.ibm.com%2Fauth%2Foauth2%2Fcallback&scope=user&state=qwertyuiopasdfghjklzxcvbnm to validate your session : @whitewater/rapid`. 
+And run `npm install`, and you may get an err message like 
+
+`npm ERR! visit https://github.ibm.com/login/oauth/authorize?redirect_uri=https%3A%2F%2Fnpm.whitewater.ibm.com%2Fauth%2Foauth2%2Fcallback&scope=user&state=qwertyuiopasdfghjklzxcvbnm to validate your session : @whitewater/rapid`
+
 
 Visit `https://github.ibm.com/login/oauth/authorize?redirect_uri=https%3A%2F%2Fnpm.whitewater.ibm.com%2Fauth%2Foauth2%2Fcallback&scope=user&state=qwertyuiopasdfghjklzxcvbnm` to validate your session. (Link will be vary according to your account.)
 
@@ -31,7 +34,7 @@ $ npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@agile
 ```
 You may need to validate your session again if any error message pops up.
 
-Finally, you can run `npm install` to install npm packages.
+Finally, you can run `npm install` to install npm packages successfully.
 
 To run the project in production mode:
 ```
